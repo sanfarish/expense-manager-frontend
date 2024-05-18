@@ -1,0 +1,58 @@
+.transactions {
+
+    .card:nth-child(3) {
+        grid-area: summary;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .sum {
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .sum span:nth-child(1) {
+            letter-spacing: 0.2ch;
+        }
+
+        .sum:nth-child(1) span:nth-child(2) {
+            color: #1454DC;
+        }
+
+        .sum:nth-child(2) span:nth-child(2) {
+            color: crimson;
+        }
+    }
+}
+
+@media only screen and (max-width: 805px) {
+    .transactions {
+        .card:nth-child(3) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .transactions {
+        .card:nth-child(3) {
+            * {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .transactions {
+        .card:nth-child(3) {
+            * {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

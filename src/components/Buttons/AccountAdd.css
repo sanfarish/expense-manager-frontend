@@ -1,0 +1,55 @@
+.accounts {
+
+    .card:nth-child(2) {
+        grid-area: button;
+        color: white;
+        padding: 0.8rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        letter-spacing: 0.1ch;
+        border: 2px dashed white;
+        box-shadow: 0 0 0 0;
+        transition: background 200ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card:nth-child(2):hover {
+        background: #1454DC;
+        border: 0;
+        cursor: pointer;
+        transition: background 200ms ease ;
+    }
+}
+
+@media only screen and (max-width: 805px) {
+    .accounts {
+
+        .card:nth-child(2) {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+        }
+
+        .card:nth-child(2):hover {
+            padding: calc(0.8rem + 2px);
+        }
+    }
+}
+
+@media only screen and (max-width: 505px) {
+    .accounts {
+        .card:nth-child(2) {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .accounts {
+        .card:nth-child(2) {
+            font-size: 0.6rem;
+        }
+    }
+}
