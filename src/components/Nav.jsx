@@ -34,25 +34,25 @@ const Nav = () => {
 					</div>
 				</li>
 				<li className='nav-item'>
-					<NavLink to="/transactions" className='nav-link' style={locationMatch('/transactions') && styleOpened}>
+					<NavLink title='Transactions' to="/transactions" className='nav-link' style={locationMatch('/transactions') && styleOpened}>
 						<i className="fa-solid fa-handshake"></i>
 						<span className='link-text'>Transactions</span>
 					</NavLink>
 				</li>
 				<li className='nav-item'>
-					<NavLink to="/accounts" className='nav-link' style={locationMatch('/accounts') && styleOpened}>
+					<NavLink title='Accounts' to="/accounts" className='nav-link' style={locationMatch('/accounts') && styleOpened}>
 						<i className="fa-solid fa-sack-dollar"></i>
 						<span className='link-text'>Accounts</span>
 					</NavLink>
 				</li>
 				<li className='nav-item'>
-					<NavLink to="/categories" className='nav-link' style={locationMatch('/categories') && styleOpened}>
+					<NavLink title='Categories' to="/categories" className='nav-link' style={locationMatch('/categories') && styleOpened}>
 						<i className="fa-solid fa-shapes"></i>
 						<span className='link-text'>Categories</span>
 					</NavLink>
 				</li>
 				<li className='nav-item'>
-					<NavLink title='logout' to="/login" className='nav-link' onClick={handleLogout}>
+					<NavLink title='Logout' to="/login" className='nav-link' onClick={handleLogout}>
 						<i className="fa-solid fa-right-from-bracket"></i>
 						<span className='link-text'>Logout</span>
 					</NavLink>
