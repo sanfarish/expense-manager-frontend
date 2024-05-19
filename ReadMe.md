@@ -16,8 +16,10 @@ Expense Manager adalah aplikasi web-based untuk membuat dan menyimpan catatan ha
 
 ```bash
 git clone
+# Server
 cd /server
 npm i
+# Client
 cd ../client
 npm i
 ```
