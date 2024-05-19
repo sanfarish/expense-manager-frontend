@@ -4,6 +4,7 @@ import { GlobalContext } from '../context/GlobalContext';
 import { DataContext } from '../context/DataContext';
 import avatar from '../avatar.png';
 import './Header.css';
+import { Popover } from 'antd';
 
 const Header = () => {
 
@@ -45,11 +46,16 @@ const Header = () => {
 
 	return (
 		<header className="head">
+			
 			<div className="head-title"><Title /></div>
+			<Popover content={user.user_email} title={'Name : '+ user.user_name} trigger="hover">
 			<div className="head-user">
+			
 				<div className='user-name'>{user.user_name ? user.user_name : 'No Data'}</div>
 				<img data-testid='avatar-image' className='user-avatar' src={avatar} alt="avatar" />
+			
 			</div>
+			</Popover>
 		</header>
 	);
 };
