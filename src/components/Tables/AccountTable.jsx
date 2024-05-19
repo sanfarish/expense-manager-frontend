@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
 import { DataContext } from '../../context/DataContext';
-import { message } from 'antd';
+import { Empty, message } from 'antd';
 import './AccountTable.css';
 import { DeleteFilled,EditFilled, EditOutlined } from '@ant-design/icons';
 
@@ -87,7 +87,11 @@ const AccountTable = () => {
 						bal={item.account_balance}
 						key={item.account_id}
 					/>
-				) : <div className='no-data'>No Data</div>}
+				) : <div className='no-data'>
+						<Empty image={Empty.PRESENTED_IMAGE_DEFAULT} 
+						description={<label style={{color:'white'}}>ACCOUNT IS EMPTY</label>}/>
+					</div>
+				}
 			</div>
 		</div>
 	);

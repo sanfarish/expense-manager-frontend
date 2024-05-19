@@ -21,12 +21,9 @@
             border-radius: 0 0 5px 5px;
             overflow-y: scroll;
 
-            .no-data {
-                width: 100px;
-                height: 100px;
-                position: relative;
-                top: 50%;
-                left: 50%;
+            .no-data{
+                padding-top:25% ;
+                opacity: 25%;
             }
         }
 

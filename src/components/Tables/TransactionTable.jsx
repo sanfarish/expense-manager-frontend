@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
 import { DataContext } from '../../context/DataContext';
-import { message } from 'antd';
+import { Empty, message } from 'antd';
 import './TransactionTable.css';
 import { DeleteFilled, EditFilled, EditOutlined } from '@ant-design/icons';
 
@@ -139,7 +139,10 @@ const TransactionTable = () => {
 		<div className="card">
 			<div className="data">
 				{transactions.length !== 0 ? transactions.map(item => <Render data={item} key={item.transaction_id} />)
-				: <div className='no-data'>No Data</div>}
+				: <div className='no-data'>
+					<Empty image={Empty.PRESENTED_IMAGE_DEFAULT} 
+					description={<label style={{color:'white'}}>TRANSACTION IS EMPTY</label>}/>
+				</div>}
 			</div>
 		</div>
 	);

@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
 import { DataContext } from '../../context/DataContext';
-import { message } from 'antd';
+import { Empty, message } from 'antd';
 import './ExpenseTable.css';
 import { DeleteFilled, EditFilled, EditOutlined } from '@ant-design/icons';
 
@@ -73,7 +73,11 @@ const ExpenseTable = () => {
 		<div className="card">
 			<span>Expense Category</span>
 			<div className="data">
-				{expenses.length !== 0 ? expenses.map(item => <Render data={item} key={item.expense_id} />) : <div className='no-data'>No Data</div>}
+				{expenses.length !== 0 ? expenses.map(item => <Render data={item} key={item.expense_id} />) : 
+				<div className='no-data'>
+					<Empty image={Empty.PRESENTED_IMAGE_DEFAULT} 
+					description={<label style={{color:'white'}}>CATEGORY IS EMPTY</label>}/>
+				</div>}
 			</div>
 		</div>
 	);

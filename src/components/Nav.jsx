@@ -52,7 +52,7 @@ const Nav = () => {
 					</NavLink>
 				</li>
 				<li className='nav-item'>
-					<NavLink to="/login" className='nav-link' onClick={handleLogout}>
+					<NavLink title='logout' to="/login" className='nav-link' onClick={handleLogout}>
 						<i className="fa-solid fa-right-from-bracket"></i>
 						<span className='link-text'>Logout</span>
 					</NavLink>
