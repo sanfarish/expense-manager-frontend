@@ -3,6 +3,7 @@ import { GlobalContext } from '../../context/GlobalContext';
 import { DataContext } from '../../context/DataContext';
 import { message } from 'antd';
 import './TransactionTable.css';
+import { DeleteFilled, EditFilled, EditOutlined } from '@ant-design/icons';
 
 const TransactionTable = () => {
 
@@ -127,9 +128,9 @@ const TransactionTable = () => {
 					{(data.id_income !== '' || data.id_expense !== '') && data.account_name}
 				</div>
 
-				<button className="edit" onClick={() => handleEditModal(data)}>Edit</button>
+				<button className="edit" onClick={() => handleEditModal(data)}><EditOutlined /></button>
 
-				<button className="delete" onClick={() => handleDelete(data.transaction_id)}>Delete</button>
+				<button className="delete" onClick={() => handleDelete(data.transaction_id)}><DeleteFilled /></button>
 			</div>
 		);
 	};

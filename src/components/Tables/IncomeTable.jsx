@@ -3,6 +3,7 @@ import { GlobalContext } from '../../context/GlobalContext';
 import { DataContext } from '../../context/DataContext';
 import { message } from 'antd';
 import './IncomeTable.css';
+import { DeleteFilled, EditFilled, EditOutlined } from '@ant-design/icons';
 
 const IncomeTable = () => {
 
@@ -59,11 +60,11 @@ const IncomeTable = () => {
 		return (
 			<div className="id">
 				<div className="name">{data.income_name}</div>
-				<button className="edit" onClick={() => handleEditModal(
+				<button title='edit' className="edit" onClick={() => handleEditModal(
 					data.income_id,
 					data.income_name
-				)}>Edit</button>
-				<button className="delete" onClick={() => handleDelete(data.income_id)}>Delete</button>
+				)}><EditOutlined /></button>
+				<button title='delete' className="delete" onClick={() => handleDelete(data.income_id)}><DeleteFilled /></button>
 			</div>
 		);
 	};

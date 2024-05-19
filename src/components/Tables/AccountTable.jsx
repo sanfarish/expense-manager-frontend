@@ -3,6 +3,7 @@ import { GlobalContext } from '../../context/GlobalContext';
 import { DataContext } from '../../context/DataContext';
 import { message } from 'antd';
 import './AccountTable.css';
+import { DeleteFilled,EditFilled, EditOutlined } from '@ant-design/icons';
 
 const AccountTable = () => {
 
@@ -70,8 +71,8 @@ const AccountTable = () => {
 			<div className='id'>
 				<div className="name">{name}</div>
 				<div className="balance" style={handleColor(bal)}>Rp {(bal < 0 ? bal * -1 : bal).toLocaleString()},-</div>
-				<button className="edit" onClick={() => handleEditModal(id, name, bal)}>Edit</button>
-				<button className="delete" onClick={() => {handleDelete(id)}}>Delete</button>
+				<button title='edit' className="edit" onClick={() => handleEditModal(id, name, bal)}><EditOutlined /></button>
+				<button title='delete' className="delete" onClick={() => {handleDelete(id)}}> <DeleteFilled /></button>
 			</div>
 		);
 	};

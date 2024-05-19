@@ -62,7 +62,7 @@ const LoginModal = () => {
                     <Input.Password placeholder='Input your password'/>
                 </Form.Item>
 			    <Form.Item>
-			        <Button className='btn' type='primary' size='medium' htmlType='submit'>Submit</Button>
+			        <Button className='btn' type='primary' size='medium' htmlType='submit'>Login</Button>
 			    </Form.Item>
 			</Form>
 			<div className="form-footer">Don't have an account?&nbsp;<NavLink to='/register' className='log-link'>Register here.</NavLink></div>
